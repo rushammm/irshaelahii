@@ -151,6 +151,18 @@ button:hover {
     /* background-color: #e60067; */
     color: rgb(255, 255, 255);
 }
+button {
+  background-color: #000;
+  border: 2px solid #ff0073;
+  color: #ff0073;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #ff0073;
+  color: #fff;
+}
+
 
 .gallery {
     display: flex;
@@ -178,6 +190,23 @@ button:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.gallery img {
+  max-width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
 
 footer {
     background-color: #333;
@@ -202,6 +231,24 @@ footer {
     background-color: rgb(255, 255, 255);
     background-color: rgba(255, 255, 255, 0.9);
   }
+.animation-item {
+  margin: 10px;
+  padding: 10px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.animation-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.animation-item .description {
+  color: #ccc;
+  margin-top: 10px;
+}
+
   .modal-content {
     margin: auto;
     display: block;
@@ -265,7 +312,24 @@ footer {
     color: #ffffff;
   }
   
-  
+  .animation-item {
+  margin: 10px;
+  padding: 10px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.animation-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.animation-item .description {
+  color: #ccc;
+  margin-top: 10px;
+}
+
 
 @tailwind base;
 @tailwind components;
