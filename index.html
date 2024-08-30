@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Irsha Elahi</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+    
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#illustrations">Illustrations</a></li>
+          <li><a href="#animations">Animations</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home">
+      <h2>Hi, I'm Irsha</h2>
+      <p>Graphic Designer & Animator</p>
+      <!-- <img src="face.png" alt="Irsha"> -->
+      <button onclick="scrollToSection('#about')">My work</button>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <div class="intro">
+        <p>Hi, I am Irsha, a Graphic Designer and Animator with five years of experience in the industry. My passion for design drives me to create visually compelling and innovative content that resonates with audiences. With a strong background in graphic design, I specialize in transforming concepts into captivating visual stories, blending creativity with technical expertise to deliver outstanding results. </p>
+      </div>
+    </section>
+
+    <section id="illustrations">
+      <h2>Illustrations</h2>
+      <div class="gallery">
+        <img src="illustrations/1.png" alt="Illustration 1" onclick="openModal(this.src)" />
+        <img src="illustrations/2.png" alt="Illustration 2" onclick="openModal(this.src)" />
+        <img src="illustrations/3.png" alt="Illustration 3" onclick="openModal(this.src)" />
+        <img src="illustrations/4.png" alt="Illustration 4" onclick="openModal(this.src)" />
+      </div>
+    </section>
+
+    <!-- <section id="animations">
+      <h2>Animations</h2>
+      <div class="gallery">
+        <video width="400" controls>
+          <source src="animations\bald.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video width="400" controls>
+          <source src="animations\curly.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video width="400" controls>
+          <source src="animations\dressing.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video width="400" controls>
+          <source src="animations\facialhair.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video width="400" controls>
+          <source src="animations\fairness.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video width="400" controls>
+          <source src="animations\fat boy.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video width="400" controls>
+          <source src="animations\fatgirl.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video width="400" controls>
+          <source src="animations\girlwaxing.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video width="400" controls>
+          <source src="animations\pimplegirl.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video width="400" controls>
+          <source src="animations\shortboy.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video width="400" controls>
+          <source src="animations\skinnyguy.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video width="400" controls>
+          <source src="animations\lightandshadow.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video width="400" controls>
+          <source src="animations\finalproject.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video width="400" controls>
+          <source src="animations\memorynostalgia.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section> -->
+
+    <section id="animations">
+      <h2>Animations</h2>
+      <div class="animation-gallery">
+        <div class="animation-item">
+          <video width="400">
+            <source src="animations/bald.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="description">
+            <p>Microaggressions</p>
+            <p>2D Animation, 2019</p>
+          </div>
+        </div>
+        <div class="animation-item">
+          <video width="400">
+            <source src="animations/curly.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="description">
+            <p>Microaggressions</p>
+            <p>2D Animation, 2020</p>
+          </div>
+        </div>
+        <div class="animation-item">
+          <video width="400">
+            <source src="animations/dressing.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="description">
+            <p>Microaggressions</p>
+            <p>2D Animation, 2020</p>
+          </div>
+        </div>
+        <div class="animation-item">
+          <video width="400">
+            <source src="animations/facialhair.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="description">
+            <p>Microaggressions</p>
+            <p>2D Animation, 2020</p>
+          </div>
+        </div>
+        <div class="animation-item">
+          <video width="400">
+            <source src="animations/fairness.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="description">
+            <p>Microaggressions</p>
+            <p>2D Animation, 2020</p>
+          </div>
+        </div>
+        <div class="animation-item">
+          <video width="400">
+            <source src="animations/fatboy.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="description">
+            <p>Microaggressions</p>
+            <p>2D Animation, 2020</p>
+          </div>
+        </div>
+        <div class="animation-item">
+          <video width="400">
+            <source src="animations/fatgirl.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="description">
+            <p>Microaggressions</p>
+            <p>2D Animation, 2020</p>
+          </div>
+        </div>
+        <div class="animation-item">
+          <video width="400">
+            <source src="animations/finalproject.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="description">
+            <p>BLOOM, Final Project</p>
+            <p>2D Animation, 2020</p>
+          </div>
+        </div>
+        <div class="animation-item">
+          <video width="400">
+            <source src="animations/girlwaxing.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="description">
+            <p>Microaggressions</p>
+            <p>2D Animation, 2020</p>
+          </div>
+        </div>
+        <div class="animation-item">
+          <video width="400">
+            <source src="animations/lightandshadow.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="description">
+            <p>Light and Shadow</p>
+            <p>2D Animation, 2021</p>
+          </div>
+        </div>
+        <div class="animation-item">
+          <video width="400">
+            <source src="animations/memorynostalgia.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="description">
+            <p>Memory and Nostalgia</p>
+            <p>2D Animation, 2020</p>
+          </div>
+        </div>
+        <div class="animation-item">
+          <video width="400">
+            <source src="animations/pimplegirl.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="description">
+            <p>Microaggressions</p>
+            <p>2D Animation, 2020</p>
+          </div>
+        </div>
+        <div class="animation-item">
+          <video width="400">
+            <source src="animations/shortboy.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="description">
+            <p>Microaggressions</p>
+            <p>2D Animation, 2020</p>
+          </div>
+        </div>
+        <div class="animation-item">
+          <video width="400">
+            <source src="animations/skinnyguy.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="description">
+            <p>Microaggressions</p>
+            <p>2D Animation, 2020</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      document.querySelectorAll('.animation-item video').forEach(video => {
+        video.addEventListener('mouseover', () => {
+          video.setAttribute('controls', 'controls');
+        });
+    
+        video.addEventListener('mouseout', () => {
+          video.removeAttribute('controls');
+        });
+      });
+    </script>
+    
+    <section id="logos">
+      <h2>Logo Design</h2>
+      <div class="gallery">
+        <img src="logos\1.jpeg" alt="Logo 1" onclick="openModal(this.src)" />
+        <img src="logos\2.jpeg" alt="Logo 2" onclick="openModal(this.src)" />
+        <img src="logos\4.jpeg" alt="Logo 4" onclick="openModal(this.src)" />
+        <img src="logos\5.jpeg" alt="Logo 5" onclick="openModal(this.src)" />
+        <img src="logos\ieds.PNG" alt="Logo 6" onclick="openModal(this.src)" />
+        <img src="logos\palma.jpg" alt="Logo 7" onclick="openModal(this.src)" />
+        <img src="logos\patang.PNG" alt="Logo 8" onclick="openModal(this.src)" />
+        <img src="logos\ride.png" alt="Logo 9" onclick="openModal(this.src)" />
+        <img src="logos\tooney.PNG" alt="Logo 10" onclick="openModal(this.src)" />
+        </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Irsha Elahi</p>
+      <p>irshaelahi02@gmail.com</p>
+      <p>London, United Kingdom</p>
+    </section>
+
+    <!-- <footer>
+      <p>&copy; 2024 Irsha Elahi</p>
+    </footer> -->
+
+    <div id="myModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="img01">
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+      function scrollToSection(section) {
+        document.querySelector(section).scrollIntoView({ behavior: 'smooth' });
+      }
+
+      function openModal(src) {
+        document.getElementById('myModal').style.display = "block";
+        document.getElementById('img01').src = src;
+      }
+
+      function closeModal() {
+        document.getElementById('myModal').style.display = "none";
+      }
+    </script>
+
+    <!-- <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const header = document.querySelector('header');
+        const backgrounds = ['#574052', '#8DC68F', '#FCBC65', '#FA7B50'];
+        const largeNums = [30, 35, 40, 50];
+        const smallNums = [3, 4, 5, 6];
+
+
+
+        const coordinates = {
+          x: undefined,
+          y: undefined
+        };
+
+
+        const generateNumber = () => {
+          return Math.floor(Math.random * 4);
+        }
+
+        const createRandomNumbers = () => {
+          const width = generateNumber();
+          const height = generateNumber();
+          const color = generateNumber();
+          return [width, height, color];
+        }
+
+        const configureWideElement = newEle => {
+          const [width, height, color] = createRandomNumbers();
+          newEle.style.width = largeNums[width] + 'px';
+          newEle.style.height = smallNums[height] + 'px';
+          newEle.style.backgroundColor = backgrounds[color];
+          newEle.classList.add('line','line-wide');
+        }
+
+        const configureTallElement = newEle => {
+          const [width, height, color] = createRandomNumbers();
+          newEle.style.width = smallNums[width] + 'px';
+          newEle.style.height = largeNums[height] + 'px';
+          newEle.style.backgroundColor = backgrounds[color];
+          newEle.classList.add('line','line-high');
+        }
+
+        const addElement = () => {
+          const typeNum = Math.round(Math.random());
+          const newEle = document.createElement('div');
+         if(typeNum === 0){
+          configureWideElement(newEle);
+         } else {
+          configureTallElement(newEle);
+
+         }
+         
+        
+
+          newEle.style.left = coordinates.x + 'px';
+          newEle.style.top = coordinates.y + 'px';
+
+          header.appendChild(newEle);
+        }
+        const updateCoordinates = e => {
+          if(coordinates.x === undefined || coordinates.y === undefined){
+            coordinates.x = e.x;
+            coordinates.y = e.y;
+            addElement();
+          }
+          if(Math.abs(coordinates.x - e.x) > 50 || Math.abs(coordinates.y - e.y > 50) ){
+            coordinates.x = e.x;
+            coordinates.y = e.y;
+            addElement();
+          }
+          
+        }
+        header.addEventListener('mousemove', e => {
+          updateCoordinates(e);
+        });
+      });
+    </script> -->
+  </body>
+</html>
