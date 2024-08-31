@@ -16,7 +16,6 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#logos">Logos</a></li>
           <li><a href="#illustrations">Illustrations</a></li>
           <li><a href="#animations">Animations</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -38,21 +37,6 @@
       </div>
     </section>
 
-      
-    <section id="logos">
-      <h2>Logo Design</h2>
-      <div class="gallery">
-<!--         <img src="logos\1.jpeg" alt="Logo 1" onclick="openModal(this.src)" /> -->
-        <img src="logos\2.jpeg" alt="Logo 2" onclick="openModal(this.src)" />
-        <img src="logos\4.jpeg" alt="Logo 4" onclick="openModal(this.src)" />
-        <img src="logos\5.jpeg" alt="Logo 5" onclick="openModal(this.src)" />
-        <img src="logos\ieds.PNG" alt="Logo 6" onclick="openModal(this.src)" />
-        <img src="logos\palma.jpg" alt="Logo 7" onclick="openModal(this.src)" />
-        <img src="logos\patang.PNG" alt="Logo 8" onclick="openModal(this.src)" />
-        <img src="logos\ride.png" alt="Logo 9" onclick="openModal(this.src)" />
-        <img src="logos\tooney.PNG" alt="Logo 10" onclick="openModal(this.src)" />
-        </div>
-    </section>
     <section id="illustrations">
       <h2>Illustrations</h2>
       <div class="gallery">
@@ -281,7 +265,21 @@
         });
       });
     </script>
-  
+    
+    <section id="logos">
+      <h2>Logo Design</h2>
+      <div class="gallery">
+        <img src="logos\1.jpeg" alt="Logo 1" onclick="openModal(this.src)" />
+        <img src="logos\2.jpeg" alt="Logo 2" onclick="openModal(this.src)" />
+        <img src="logos\4.jpeg" alt="Logo 4" onclick="openModal(this.src)" />
+        <img src="logos\5.jpeg" alt="Logo 5" onclick="openModal(this.src)" />
+        <img src="logos\ieds.PNG" alt="Logo 6" onclick="openModal(this.src)" />
+        <img src="logos\palma.jpg" alt="Logo 7" onclick="openModal(this.src)" />
+        <img src="logos\patang.PNG" alt="Logo 8" onclick="openModal(this.src)" />
+        <img src="logos\ride.png" alt="Logo 9" onclick="openModal(this.src)" />
+        <img src="logos\tooney.PNG" alt="Logo 10" onclick="openModal(this.src)" />
+        </div>
+    </section>
 
     <section id="contact">
       <h2>Contact</h2>
@@ -294,10 +292,17 @@
       <p>&copy; 2024 Irsha Elahi</p>
     </footer> -->
 
-    <div id="myModal" class="modal">
+    <!-- <div id="myModal" class="modal">
       <span class="close" onclick="closeModal()">&times;</span>
       <img class="modal-content" id="img01">
-    </div>
+    </div> -->
+
+    <!-- Modal Structure -->
+<div class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" src="" alt="Modal Image">
+</div>
+
 
     <script src="scripts.js"></script>
     <script>
@@ -392,5 +397,53 @@
         });
       });
     </script> -->
+
+
+
+    <script>
+      // JavaScript to handle modal functionality
+      document.addEventListener('DOMContentLoaded', function () {
+          // Get the modal
+          const modal = document.querySelector('.modal');
+          const modalContent = document.querySelector('.modal-content');
+          const closeButton = document.querySelector('.close');
+  
+          // Get all images in the gallery
+          const images = document.querySelectorAll('.gallery img');
+  
+          // Loop through images and add click event to each
+          images.forEach(image => {
+              image.addEventListener('click', function () {
+                  // Set the source of the modal image to the clicked image
+                  modalContent.src = this.src;
+                  
+                  // Show the modal and add the open class
+                  modal.style.display = 'block';
+                  setTimeout(() => {
+                      modal.classList.add('open');
+                  }, 10); // Timeout to allow CSS transition
+              });
+          });
+  
+          // Close the modal when the close button is clicked
+          closeButton.addEventListener('click', function () {
+              modal.classList.remove('open');
+              setTimeout(() => {
+                  modal.style.display = 'none';
+              }, 300); // Timeout to allow CSS transition
+          });
+  
+          // Close the modal when the user clicks anywhere outside the modal content
+          modal.addEventListener('click', function (e) {
+              if (e.target === modal) {
+                  modal.classList.remove('open');
+                  setTimeout(() => {
+                      modal.style.display = 'none';
+                  }, 300); // Timeout to allow CSS transition
+              }
+          });
+      });
+  </script>
+  
   </body>
 </html>
