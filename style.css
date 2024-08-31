@@ -14,7 +14,7 @@ body {
     background-color: #000000;
     color: #ffffff;
 }
-
+/* animation bg */
 /* header {
     width: 100%;
     height: 100vh;
@@ -152,18 +152,17 @@ button:hover {
     color: rgb(255, 255, 255);
 }
 button {
-  background-color: #000;
-  border: 2px solid #ff0073;
-  color: #ff0073;
-  border-radius: 5px;
-}
-
-button:hover {
-  background-color: #ff0073;
-  color: #fff;
-}
-
-
+    background-color: #000;
+    border: 2px solid #ff0073;
+    color: #ff0073;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #ff0073;
+    color: #fff;
+  }
+  
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -172,6 +171,20 @@ button:hover {
     padding: 2rem 0;
 }
 
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #333;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+  
 .gallery img {
     max-width: 300px;
     border: 3px solid #000000;
@@ -186,151 +199,99 @@ button:hover {
 
 
 
-.gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
-}
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+
+.animation-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
-.gallery img {
-  max-width: 100%;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    position: fixed;
+.animation-item {
     width: 100%;
-    bottom: 0;
-    font-size: 0.9rem;
+    max-width: 600px;
+    text-align: center;
 }
 
+.animation-item video {
+    width: 100%;
+    border: 2px solid #333;
+}
+
+.animation-item .description {
+    margin-top: 0.5rem;
+}
+/* 
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1001;
+    padding-top: 100px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 0.9);
-  }
-.animation-item {
-  margin: 10px;
-  padding: 10px;
-  background-color: #1a1a1a;
-  border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
-.animation-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.animation-item .description {
-  color: #ccc;
-  margin-top: 10px;
-}
-
-  .modal-content {
+.modal-content {
     margin: auto;
     display: block;
     width: 80%;
     max-width: 700px;
-  }
-  .modal-content, #caption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-  }
-  @keyframes zoom {
-    from {transform: scale(0)}
-    to {transform: scale(1)}
-  }
-  .close {
+} */
+/* Smooth transition for modal display */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: opacity 0.3s ease; /* Add transition for opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    transition: transform 0.3s ease; /* Add transition for transform */
+    transform: scale(0.7); /* Initial scale for transition effect */
+}
+
+.modal.open {
+    display: block;
+    opacity: 1; /* Make modal fully visible */
+}
+
+.modal.open .modal-content {
+    transform: scale(1); /* Scale up to full size */
+}
+
+
+.close {
     position: absolute;
-    top: 20px;
+    top: 15px;
     right: 35px;
-    color: #000000;
+    color: #fff;
     font-size: 40px;
     font-weight: bold;
-    transition: 0.3s;
-  }
-  .close:hover,
-  .close:focus {
-    color: #000000;
-    text-decoration: none;
+    transition: color 0.3s ease;
     cursor: pointer;
-  }
-  .animation-gallery {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  .animation-item {
-    text-align: center;
-    position: relative; /* Ensures video hover effects apply correctly */
-  }
-  
-  .animation-item video {
-    border: 3px solid #000000;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: block; /* Ensures video behaves like a block element */
-  }
-  
-  .animation-item video:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  .description {
-    margin-top: 0.5rem;
-  }
-  
-  .description p {
-    margin: 0.2rem 0;
-    font-size: 1rem;
-    color: #ffffff;
-  }
-  
-  .animation-item {
-  margin: 10px;
-  padding: 10px;
-  background-color: #1a1a1a;
-  border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.animation-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.close:hover,
+.close:focus {
+    color: #ff0073;
 }
-
-.animation-item .description {
-  color: #ccc;
-  margin-top: 10px;
-}
-
 
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; 
