@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -14,60 +13,7 @@ body {
     background-color: #000000;
     color: #ffffff;
 }
-/* animation bg */
-/* header {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    background-color: rgb(0, 0, 0);
-    border: 1px solid red;
-    overflow: hidden;
-} */
 
-/* h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    font-size: calc(1em + 7vw);
-    font-family: ;
-} */
-/* .line {
-    position: absolute;
-    border-radius: 1em;
-    animation-duration: 1s;
-}
-
-.line-wide {
-    transform: scaleX(1);
-    animation-name: change-width;
-
-}
-.line-high {
-    transform: scaleY(1);
-    animation-name: change-height;
-
-}
-
-@keyframes change-width {
-    0% {
-        transform: scaleX(0);
-    }
-
-    100% {
-        transform: scaleX(1);
-    }
-}
-@keyframes change-height {
-    0% {
-        transform: scaleY(0);
-    }
-    100% {
-        transform: scaleY(1);
-    }
-} */
-/* ==================================== */
 header {
     background-color: #000000;
     padding: 1rem 0;
@@ -82,11 +28,12 @@ header nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    margin-left: 60%;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 header nav ul li {
-    margin: 0 1rem;
+    margin: 0.5rem 1rem;
 }
 
 header nav ul li a {
@@ -114,13 +61,8 @@ section#home {
     height: 100vh;
     color: #ffffff;
     padding: 4rem 2rem;
-    margin-right: 40%;
 }
 
-#home img {
-    max-width: 400px;
-    margin-left: 100%;
-  }
 section h2 {
     margin-bottom: 1.5rem;
     font-size: 2rem;
@@ -141,28 +83,18 @@ button {
     padding: 0.5rem 2rem;
     font-size: 1rem;
     color: #ff0073;
-    /* background-color: #ff0073; */
-    border: none;
+    background-color: #000;
+    border: 2px solid #ff0073;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
-    /* background-color: #e60067; */
-    color: rgb(255, 255, 255);
-}
-button {
-    background-color: #000;
-    border: 2px solid #ff0073;
-    color: #ff0073;
-    border-radius: 5px;
-  }
-  
-  button:hover {
     background-color: #ff0073;
     color: #fff;
-  }
-  
+}
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -171,22 +103,9 @@ button {
     padding: 2rem 0;
 }
 
-
 .gallery img {
     max-width: 100%;
     height: auto;
-    border: 2px solid #333;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-}
-
-  
-.gallery img {
-    max-width: 300px;
     border: 3px solid #000000;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -197,8 +116,9 @@ button {
     margin: 10px;
 }
 
-
-
+.gallery img:hover {
+    transform: scale(1.05);
+}
 
 .animation-gallery {
     display: flex;
@@ -222,27 +142,8 @@ button {
 .animation-item .description {
     margin-top: 0.5rem;
 }
-/* 
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1001;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
-}
 
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-} */
-/* Smooth transition for modal display */
+/* Modal styles */
 .modal {
     display: none;
     position: fixed;
@@ -275,7 +176,6 @@ button {
     transform: scale(1); /* Scale up to full size */
 }
 
-
 .close {
     position: absolute;
     top: 15px;
@@ -292,6 +192,49 @@ button {
     color: #ff0073;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities; 
+/* Media Queries */
+@media (max-width: 768px) {
+    header nav ul {
+        margin-left: 0;
+    }
+    header nav ul li {
+        margin: 0.5rem;
+    }
+    section {
+        padding: 2rem 1rem;
+    }
+    section#home {
+        padding: 2rem 1rem;
+    }
+    section h2 {
+        font-size: 1.5rem;
+    }
+    section p {
+        font-size: 1rem;
+    }
+    .gallery img {
+        width: 150px;
+        height: 150px;
+    }
+    .animation-item video {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    section h2 {
+        font-size: 1.2rem;
+    }
+    section p {
+        font-size: 0.9rem;
+    }
+    .gallery img {
+        width: 100px;
+        height: 100px;
+    }
+}
