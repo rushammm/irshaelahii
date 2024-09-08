@@ -45,7 +45,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #ff0073;
+    color: #ffc814;
 }
 
 section {
@@ -66,7 +66,7 @@ section#home {
 section h2 {
     margin-bottom: 1.5rem;
     font-size: 2rem;
-    border-bottom: 2px solid #ff0073;
+    border-bottom: 2px solid #ffc814;
     display: inline-block;
     padding-bottom: 0.5rem;
 }
@@ -82,16 +82,16 @@ button {
     margin-top: 2rem;
     padding: 0.5rem 2rem;
     font-size: 1rem;
-    color: #ff0073;
+    color: #ffc814;
     background-color: #000;
-    border: 2px solid #ff0073;
+    border: 2px solid #ffc814;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
-    background-color: #ff0073;
+    background-color: #ffc814;
     color: #fff;
 }
 
@@ -189,7 +189,7 @@ button:hover {
 
 .close:hover,
 .close:focus {
-    color: #ff0073;
+    color: #ffc814;
 }
 
 /* Media Queries */
